@@ -1,6 +1,6 @@
-bus_number	real_power	reactive_power	max_reactive_power	min_reactive_power	voltage_magnitude	rated_power	status	max_real_power	min_real_powercost_function_type	startup_cost	shutdown_cost	n	polynomial_coefficients
-1	170.0	5.0	10.0	0.0	1.0	100.0	1	340	0.02	0.0	0.0	3	0.000000,7.920951,0.000000
-2	29.5	0.0	30.0	-30.0	1.0	100.0	1	59	0.02	0.0	0.0	3	0.000000,23.269494,0.000000
-3	0.0	20.0	40.0	0.0	1.0	100.0	1	0	0.02	0.0	0.0	3	0.000000,0.000000,0.000000
-6	0.0	9.0	24.0	-6.0	1.0	100.0	1	0	0.02	0.0	0.0	3	0.000000,0.000000,0.000000
-8	0.0	9.0	24.0	-6.0	1.0	100.0	1	0	0.02	0.0	0.0	3	0.000000,0.000000,0.000000
+bus_number	real_power	reactive_power	max_reactive_power	min_reactive_power	voltage_magnitude	rated_power	status	max_real_power	min_real_power	cost_function_type	startup_cost	shutdown_cost	n	polynomial_coefficients
+1	170.0	5.0	10.0	0.0	1.0	100.0	1	340	0.0	2	0.0	0.0	3	0.000000,7.920951,0.000000
+2	29.5	0.0	30.0	-30.0	1.0	100.0	1	59	0.0	2	0.0	0.0	3	0.000000,23.269494,0.000000
+3	0.0	20.0	40.0	0.0	1.0	100.0	1	0	0.0	2	0.0	0.0	3	0.000000,0.000000,0.000000
+6	0.0	9.0	24.0	-6.0	1.0	100.0	1	0	0.0	2	0.0	0.0	3	0.000000,0.000000,0.000000
+8	0.0	9.0	24.0	-6.0	1.0	100.0	1	0	0.0	2	0.0	0.0	3	0.000000,0.000000,0.000000

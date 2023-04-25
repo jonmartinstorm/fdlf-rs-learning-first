@@ -30,6 +30,7 @@ pub struct Generator {
     pub min_real_power: f64,
     pub startup_cost: f64,
     pub shutdown_cost: f64,
+    #[serde(skip)] // skip this field when serializing, not implemented yet
     pub polynomial_coefficients: Vec<f64>,
 }
 
