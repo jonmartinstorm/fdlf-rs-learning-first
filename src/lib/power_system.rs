@@ -1,11 +1,11 @@
-#[derive(Debug, Clone, Copy, PartialEq)]
+#[derive(Debug, Clone, Copy, PartialEq, serde::Serialize, serde::Deserialize)]
 pub enum BusType {
     Slack,
     PV,
     PQ,
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, serde::Serialize, serde::Deserialize)]
 pub struct Bus {
     pub id: usize,
     pub name: String,
@@ -18,6 +18,7 @@ pub struct Bus {
     pub bus_type: BusType,
 }
 
+#[derive(Debug, Clone, serde::Serialize, serde::Deserialize)]
 pub struct Branch {
     pub from_bus_id: usize,
     pub to_bus_id: usize,
@@ -27,6 +28,7 @@ pub struct Branch {
     pub rating: f64,
 }
 
+#[derive(Debug, Clone, serde::Serialize, serde::Deserialize)]
 pub struct PowerSystem {
     pub buses: Vec<Bus>,
     pub branches: Vec<Branch>,
