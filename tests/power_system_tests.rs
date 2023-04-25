@@ -124,3 +124,37 @@ fn test_power_system() {
     assert_eq!(powersystem.branches.len(), 2);
     
 }
+
+
+#[test]
+fn test_generator_struct() {
+    let gen = Generator {
+        bus_number: 1,
+        real_power: 10.0,
+        reactive_power: 5.0,
+        max_reactive_power: 10.0,
+        min_reactive_power: -10.0,
+        voltage_magnitude: 1.0,
+        rated_power: 20.0,
+        status: 1,
+        max_real_power: 20.0,
+        min_real_power: 0.0,
+        startup_cost: 100.0,
+        shutdown_cost: 50.0,
+        polynomial_coefficients: vec![1.0, -2.0, 3.0],
+    };
+
+    assert_eq!(gen.bus_number, 1);
+    assert_eq!(gen.real_power, 10.0);
+    assert_eq!(gen.reactive_power, 5.0);
+    assert_eq!(gen.max_reactive_power, 10.0);
+    assert_eq!(gen.min_reactive_power, -10.0);
+    assert_eq!(gen.voltage_magnitude, 1.0);
+    assert_eq!(gen.rated_power, 20.0);
+    assert_eq!(gen.status, 1);
+    assert_eq!(gen.max_real_power, 20.0);
+    assert_eq!(gen.min_real_power, 0.0);
+    assert_eq!(gen.startup_cost, 100.0);
+    assert_eq!(gen.shutdown_cost, 50.0);
+    assert_eq!(gen.polynomial_coefficients, vec![1.0, -2.0, 3.0]);
+}
