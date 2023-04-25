@@ -19,9 +19,15 @@ pub struct Bus {
 }
 
 pub struct Branch {
-    // ...
+    pub from_bus_id: usize,
+    pub to_bus_id: usize,
+    pub resistance: f64,
+    pub reactance: f64,
+    pub susceptance: f64,
+    pub rating: f64,
 }
 
 pub struct PowerSystem {
-    // ...
+    pub buses: Vec<Bus>,
+    pub branches: Vec<Branch>,
 }
