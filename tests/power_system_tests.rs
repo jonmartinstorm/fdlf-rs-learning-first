@@ -7,8 +7,6 @@ fn test_bus() {
         name: "Bus 1".to_string(),
         voltage: 1.0,
         angle: 0.0,
-        p_gen: 1.0,
-        q_gen: 0.0,
         p_load: 0.0,
         q_load: 0.0,
         bus_type: BusType::Slack,
@@ -19,8 +17,6 @@ fn test_bus() {
         name: "Bus 2".to_string(),
         voltage: 1.0,
         angle: 0.0,
-        p_gen: -1.0, // negative generation is invalid
-        q_gen: 0.0,
         p_load: 1.0,
         q_load: 0.0,
         bus_type: BusType::PQ,
@@ -30,8 +26,6 @@ fn test_bus() {
     assert_eq!(bus1.name, "Bus 1");
     assert_eq!(bus1.voltage, 1.0);
     assert_eq!(bus1.angle, 0.0);
-    assert_eq!(bus1.p_gen, 1.0);
-    assert_eq!(bus1.q_gen, 0.0);
     assert_eq!(bus1.p_load, 0.0);
     assert_eq!(bus1.q_load, 0.0);
     assert_eq!(bus1.bus_type, BusType::Slack);
@@ -40,8 +34,6 @@ fn test_bus() {
     assert_eq!(bus2.name, "Bus 2");
     assert_eq!(bus2.voltage, 1.0);
     assert_eq!(bus2.angle, 0.0);
-    assert_eq!(bus2.p_gen, -1.0);
-    assert_eq!(bus2.q_gen, 0.0);
     assert_eq!(bus2.p_load, 1.0);
     assert_eq!(bus2.q_load, 0.0);
     assert_eq!(bus2.bus_type, BusType::PQ);
@@ -93,8 +85,6 @@ fn test_power_system() {
                 name: "Bus 1".to_string(),
                 voltage: 1.0,
                 angle: 0.0,
-                p_gen: 1.0,
-                q_gen: 0.0,
                 p_load: 0.0,
                 q_load: 0.0,
                 bus_type: BusType::Slack,
@@ -104,8 +94,6 @@ fn test_power_system() {
                 name: "Bus 2".to_string(),
                 voltage: 1.0,
                 angle: 0.0,
-                p_gen: -1.0, // negative generation is invalid
-                q_gen: 0.0,
                 p_load: 1.0,
                 q_load: 0.0,
                 bus_type: BusType::PQ,

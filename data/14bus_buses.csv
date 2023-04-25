@@ -1,4 +1,4 @@
-id	name	bus_type	p_load	q_load	Gs	Bs	area	voltage	angle	baseKV	zone	Vmax	Vmin
+id	name	bus_type	p_load	q_load	shunt_conductance	shunt_susceptance	area_number	voltage	angle	base_voltage	loss_zone	max_voltage_magnitude	min_voltage_magnitude
 1	Bus1	Slack	0.0	0.0	0.0	0.0	1	1.00000	0.00000	1.0	1	1.06000	0.94000
 2	Bus2	PQ	21.7	12.7	0.0	0.0	1	1.00000	0.00000	1.0	1	1.06000	0.94000
 3	Bus3	PQ	94.2	19.0	0.0	0.0	1	1.00000	0.00000	1.0	1	1.06000	0.94000

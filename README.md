@@ -31,15 +31,15 @@ These are the basic steps for implementing the fast decoupled load flow algorith
 | bus_type | Type of bus (`1`: PQ, `2`: PV, `3`: reference)                        |
 | p_load   | Active power demand at the bus (in MW)                                |
 | q_load   | Reactive power demand at the bus (in MVAr)                            |
-| Gs       | Shunt conductance (in MW)                                             |
-| Bs       | Shunt susceptance (in MVAr)                                           |
-| area     | Area number                                                           |
+| shunt_conductance       | Shunt conductance (in MW)                                             |
+| shunt_susceptance       | Shunt susceptance (in MVAr)                                           |
+| area_number     | Area number                                                           |
 | voltage  | Voltage magnitude setpoint (in per unit)                              |
 | angle    | Voltage angle setpoint (in degrees)                                    |
-| baseKV   | Base voltage (in kV)                                                  |
-| zone     | Loss zone number                                                       |
-| Vmax     | Maximum voltage magnitude limit (in per unit)                         |
-| Vmin     | Minimum voltage magnitude limit (in per unit)                         |
+| base_voltage   | Base voltage (in kV)                                                  |
+| loss_zone     | Loss zone number                                                       |
+| max_voltage_magnitude     | Maximum voltage magnitude limit (in per unit)                         |
+| min_voltage_magnitude     | Minimum voltage magnitude limit (in per unit)                         |
 
 ### 14bus_generators.csv
 | Header | Description                                              |
