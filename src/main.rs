@@ -1,17 +1,12 @@
 use std::fs::File;
 use std::io::{self, BufRead, BufReader};
+use std::task::ready;
 
 use csv;
 
+use fdlf_rs_tutorial::power_system::{Bus, BusType, Branch, PowerSystem, Generator};
+
 fn main() -> io::Result<()>{
     println!("Hello, world!");
-    let file = File::open("data/14bus_buses.csv")?;
-    let reader = BufReader::new(file);
-    
-    for line in reader.lines() {
-        let line = line?;
-        println!("{}", line);
-    }
-
     Ok(())
 }
