@@ -21,3 +21,61 @@ Sure, here is a step-by-step guide on how to implement the fast decoupled load f
 - [ ] Write a function to output the load flow results, including the bus voltages and phase angles, branch power flows, and other relevant data.
 
 These are the basic steps for implementing the fast decoupled load flow algorithm in Rust. Of course, there may be additional details and optimizations you can add, depending on the specific requirements of your project.
+
+## Data descriptions
+### 14bus_buses.csv
+| Header   | Description                                                           |
+|----------|-----------------------------------------------------------------------|
+| id       | Bus ID                                                                |
+| name     | Bus name                                                              |
+| bus_type | Type of bus (`1`: PQ, `2`: PV, `3`: reference)                        |
+| p_load   | Active power demand at the bus (in MW)                                |
+| q_load   | Reactive power demand at the bus (in MVAr)                            |
+| Gs       | Shunt conductance (in MW)                                             |
+| Bs       | Shunt susceptance (in MVAr)                                           |
+| area     | Area number                                                           |
+| voltage  | Voltage magnitude setpoint (in per unit)                              |
+| angle    | Voltage angle setpoint (in degrees)                                    |
+| baseKV   | Base voltage (in kV)                                                  |
+| zone     | Loss zone number                                                       |
+| Vmax     | Maximum voltage magnitude limit (in per unit)                         |
+| Vmin     | Minimum voltage magnitude limit (in per unit)                         |
+
+### 14bus_generators.csv
+| Header | Description                                              |
+|--------|----------------------------------------------------------|
+| bus    | Bus number to which the generator is attached            |
+| Pg     | Real power output of the generator (in MW)                |
+| Qg     | Reactive power output of the generator (in MVAr)          |
+| Qmax   | Maximum reactive power output of the generator (in MVAr) |
+| Qmin   | Minimum reactive power output of the generator (in MVAr) |
+| Vg     | Voltage magnitude setpoint for the generator (in per unit)|
+| mBase  | Rated power of the generator (in MVA)                     |
+| status | Generator status (`0`: offline, `1`: online)             |
+| Pmax   | Maximum real power output of the generator (in MW)        |
+| Pmin   | Minimum real power output of the generator (in MW)        |
+
+### 14bus_generatorcost.csv
+| Header | Description                                                     |
+|--------|-----------------------------------------------------------------|
+| 2      | Type of cost function (`2`: quadratic)                          |
+| startup| Startup cost for the generator (in USD)                         |
+| shutdown| Shutdown cost for the generator (in USD)                         |
+| n      | Number of cost coefficients                                      |
+| c(n-1) | Coefficient for `Pg^2` term in the cost function (in USD/MW^2)   |
+| ...    | Additional coefficients for the cost function (in descending order) |
+| c0     | Coefficient for constant term in the cost function (in USD)     |
+
+### 14bus_branches.csv
+| Header | Description                                                         |
+|--------|---------------------------------------------------------------------|
+| fbus   | Bus number for the "from" end of the branch                          |
+| tbus   | Bus number for the "to" end of the branch                            |
+| r      | Resistance of the branch (in p.u.)                                   |
+| x      | Reactance of the branch (in p.u.)                                    |
+| b      | Charging susceptance of the branch (in p.u.)                         |
+| rateA  | MVA rating A of the branch                                           |
+| rateB  | MVA rating B of the branch                                           |
+| rateC  | MVA rating C of the branch                                           |
+| ratio  | Transformer off-nominal turns ratio or tap setting (if applicable)   |
+| angle  | Transformer phase shift angle (if applicable)                       
