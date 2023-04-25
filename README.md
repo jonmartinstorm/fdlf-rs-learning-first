@@ -5,7 +5,7 @@ A repo for learning how to implement fast decoupled load flow in rust from scrac
 ## ChatGPT suggested Step-by-step
 Sure, here is a step-by-step guide on how to implement the fast decoupled load flow algorithm from scratch in Rust:
 
-- [ ] Define the data structures for the power system, including buses, branches, and loads. You can use Rust structs to represent these elements and their properties.
+- [x] Define the data structures for the power system, including buses, branches, and loads. You can use Rust structs to represent these elements and their properties.
 - [ ] Implement a function to read the power system data from a file or database and populate the data structures.
 - [ ] Create a function to calculate the initial voltage and phase angle for each bus in the power system. You can use the flat start method to initialize the voltage and phase angle.
 - [ ] Write a function to calculate the admittance matrix of the power system, which includes the series and shunt admittances of the branches.
