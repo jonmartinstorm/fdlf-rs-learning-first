@@ -2,6 +2,9 @@
 A repo for learning how to implement fast decoupled load flow in rust from scracth. A tutorial project.
 
 
+## IEEE 14-bus
+![IEEE 14-bus system](data/14bus.jpg)
+
 ## ChatGPT suggested Step-by-step
 Sure, here is a step-by-step guide on how to implement the fast decoupled load flow algorithm from scratch in Rust:
 
