@@ -48,7 +48,7 @@ fn test_branch() {
         resistance: 0.0,
         reactance: 0.0,
         susceptance: 0.0,
-        rating: 0.0,
+        rating_a: 0.0,
     };
 
     let branch2 = Branch {
@@ -57,7 +57,7 @@ fn test_branch() {
         resistance: 1.0,
         reactance: 1.0,
         susceptance: 1.0,
-        rating: 0.0,
+        rating_a: 0.0,
     };
 
     assert_eq!(branch1.from_bus_id, 1);
@@ -65,14 +65,14 @@ fn test_branch() {
     assert_eq!(branch1.resistance, 0.0);
     assert_eq!(branch1.reactance, 0.0);
     assert_eq!(branch1.susceptance, 0.0);
-    assert_eq!(branch1.rating, 0.0);
+    assert_eq!(branch1.rating_a, 0.0);
 
     assert_eq!(branch2.from_bus_id, 2);
     assert_eq!(branch2.to_bus_id, 1);
     assert_eq!(branch2.resistance, 1.0);
     assert_eq!(branch2.reactance, 1.0);
     assert_eq!(branch2.susceptance, 1.0);
-    assert_eq!(branch2.rating, 0.0);
+    assert_eq!(branch2.rating_a, 0.0);
 
 }
 
@@ -106,7 +106,7 @@ fn test_power_system() {
                 resistance: 0.0,
                 reactance: 0.0,
                 susceptance: 0.0,
-                rating: 0.0,
+                rating_a: 0.0,
             },
             Branch {
                 from_bus_id: 2,
@@ -114,7 +114,7 @@ fn test_power_system() {
                 resistance: 1.0,
                 reactance: 1.0,
                 susceptance: 1.0,
-                rating: 0.0,
+                rating_a: 0.0,
             },
         ],
     };

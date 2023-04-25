@@ -63,13 +63,16 @@ These are the basic steps for implementing the fast decoupled load flow algorith
 ### 14bus_branches.csv
 | Header | Description                                                         |
 |--------|---------------------------------------------------------------------|
-| fbus   | Bus number for the "from" end of the branch                          |
-| tbus   | Bus number for the "to" end of the branch                            |
-| r      | Resistance of the branch (in p.u.)                                   |
-| x      | Reactance of the branch (in p.u.)                                    |
-| b      | Charging susceptance of the branch (in p.u.)                         |
-| rateA  | MVA rating A of the branch                                           |
-| rateB  | MVA rating B of the branch                                           |
-| rateC  | MVA rating C of the branch                                           |
+| from_bus_id   | Bus number for the "from" end of the branch                          |
+| to_bus_id   | Bus number for the "to" end of the branch                            |
+| resistance      | Resistance of the branch (in p.u.)                                   |
+| reactance      | Reactance of the branch (in p.u.)                                    |
+| susceptance      | Charging susceptance of the branch (in p.u.)                         |
+| rating_a  | MVA rating A of the branch                                           |
+| ratin_b  | MVA rating B of the branch                                           |
+| rating_c  | MVA rating C of the branch                                           |
 | ratio  | Transformer off-nominal turns ratio or tap setting (if applicable)   |
-| angle  | Transformer phase shift angle (if applicable)                       
+| angle  | Transformer phase shift angle (if applicable)      |          
+|status|  Status of the branch (1 if in service, 0 if out of service) |
+|angle_min|	Minimum allowed phase shift angle for the branch, if it represents a transformer|
+|angle_max|	Maximum allowed phase shift angle for the branch, if it represents a transformer|      

@@ -41,7 +41,7 @@ pub struct Branch {
     pub resistance: f64,
     pub reactance: f64,
     pub susceptance: f64,
-    pub rating: f64,
+    pub rating_a: f64,
 }
 
 #[derive(Debug, Clone, serde::Serialize, serde::Deserialize)]
