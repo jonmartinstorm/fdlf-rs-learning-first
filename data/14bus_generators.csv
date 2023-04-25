@@ -1,4 +1,4 @@
-bus	Pg	Qg	Qmax	Qmin	Vg	mBase	status	Pmax	Pmin
+bus_number	real_power	reactive_power	max_reactive_power	min_reactive_power	voltage_magnitude	rated_power	status	max_real_power	min_real_power
 1	 170.0	 5.0	 10.0	 0.0	 1.0	 100.0	 1	 340	 0.0
 2	 29.5	 0.0	 30.0	 -30.0	 1.0	 100.0	 1	 59	 0.0
 3	 0.0	 20.0	 40.0	 0.0	 1.0	 100.0	 1	 0	 0.0

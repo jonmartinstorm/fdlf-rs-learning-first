@@ -44,16 +44,16 @@ These are the basic steps for implementing the fast decoupled load flow algorith
 ### 14bus_generators.csv
 | Header | Description                                              |
 |--------|----------------------------------------------------------|
-| bus    | Bus number to which the generator is attached            |
-| Pg     | Real power output of the generator (in MW)                |
-| Qg     | Reactive power output of the generator (in MVAr)          |
-| Qmax   | Maximum reactive power output of the generator (in MVAr) |
-| Qmin   | Minimum reactive power output of the generator (in MVAr) |
-| Vg     | Voltage magnitude setpoint for the generator (in per unit)|
-| mBase  | Rated power of the generator (in MVA)                     |
+| bus_number    | Bus number to which the generator is attached            |
+| real_power     | Real power output of the generator (in MW)                |
+| reactive_power     | Reactive power output of the generator (in MVAr)          |
+| max_reactive_power   | Maximum reactive power output of the generator (in MVAr) |
+| min_reactive_power   | Minimum reactive power output of the generator (in MVAr) |
+| voltage_magnitude     | Voltage magnitude setpoint for the generator (in per unit)|
+| rated_power  | Rated power of the generator (in MVA)                     |
 | status | Generator status (`0`: offline, `1`: online)             |
-| Pmax   | Maximum real power output of the generator (in MW)        |
-| Pmin   | Minimum real power output of the generator (in MW)        |
+| max_real_power   | Maximum real power output of the generator (in MW)        |
+| min_real_power   | Minimum real power output of the generator (in MW)        |
 
 ### 14bus_generatorcost.csv
 | Header | Description                                                     |
