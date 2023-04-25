@@ -7,6 +7,6 @@ edition = "2021"
 
 [lib]
 name = "fdlf_rs_tutorial"
-path = "src/lib/power_system.rs"
+path = "src/lib/lib.rs"
 
 [dependencies]
