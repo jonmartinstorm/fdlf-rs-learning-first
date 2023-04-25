@@ -54,17 +54,11 @@ These are the basic steps for implementing the fast decoupled load flow algorith
 | status | Generator status (`0`: offline, `1`: online)             |
 | max_real_power   | Maximum real power output of the generator (in MW)        |
 | min_real_power   | Minimum real power output of the generator (in MW)        |
-
-### 14bus_generatorcost.csv
-| Header | Description                                                     |
-|--------|-----------------------------------------------------------------|
-| 2      | Type of cost function (`2`: quadratic)                          |
-| startup| Startup cost for the generator (in USD)                         |
-| shutdown| Shutdown cost for the generator (in USD)                         |
-| n      | Number of cost coefficients                                      |
-| c(n-1) | Coefficient for `Pg^2` term in the cost function (in USD/MW^2)   |
-| ...    | Additional coefficients for the cost function (in descending order) |
-| c0     | Coefficient for constant term in the cost function (in USD)     |
+| cost_function_type      | Type of cost function (`2`: quadratic)                          |
+| startup_cost| Startup cost for the generator (in USD)                         |
+| shutdown_cost| Shutdown cost for the generator (in USD)                         |
+| cost_coefficient_count| Number of cost coefficients                                      |
+| coefficients | Coefficient for `Pg^2` term in the cost function (in USD/MW^2)   |
 
 ### 14bus_branches.csv
 | Header | Description                                                         |

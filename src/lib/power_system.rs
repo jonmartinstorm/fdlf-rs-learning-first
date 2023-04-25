@@ -17,19 +17,20 @@ pub struct Bus {
 }
 
 #[derive(Debug, Clone, serde::Serialize, serde::Deserialize)]
-struct Generator {
-    id: usize,
-    bus_id: usize,
-    p_gen: f64,
-    q_gen: f64,
-    p_min: f64,
-    p_max: f64,
-    q_min: f64,
-    q_max: f64,
-    ramp_up: f64,
-    ramp_down: f64,
-    start_cost: f64,
-    cost_coefficients: Vec<f64>,
+pub struct Generator {
+    bus_number: i32,
+    real_power: f64,
+    reactive_power: f64,
+    max_reactive_power: f64,
+    min_reactive_power: f64,
+    voltage_magnitude: f64,
+    rated_power: f64,
+    status: i32,
+    max_real_power: f64,
+    min_real_power: f64,
+    startup_cost: f64,
+    shutdown_cost: f64,
+    polynomial_coefficients: Vec<f64>,
 }
 
 #[derive(Debug, Clone, serde::Serialize, serde::Deserialize)]

@@ -1,4 +1,4 @@
-use fdlf_rs_tutorial::power_system::{Bus, Branch, BusType, PowerSystem};
+use fdlf_rs_tutorial::power_system::{Bus, Branch, BusType, PowerSystem, Generator};
 
 #[test]
 fn test_bus() {
